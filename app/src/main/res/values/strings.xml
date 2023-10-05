@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MobileApp_Assignment1</string>
+    <!-- creating string-array for values of dropdown-->
+    <string-array name="interestType">
+        <item>Add my own rate</item>
+        <item>3 Year Fixed Rate Mortgage :6.91%</item>
+        <item>5 Year Fixed Rate Mortgage :6.54%</item>
+        <item>6 Month Convertible :7.94%</item>
+        <item>1 Year Closed :7.84%</item>
+        <item>1 Year Open :8%</item>
+        <item>2 Year Closed :7.34%</item>
+        <item>3 Year Closed :7.14%</item>
+        <item>4 Year Closed :6.99%</item>
+        <item>5 Year Closed :7.04%</item>
+        <item>6 Year Closed :6.99%</item>
+        <item>7 Year Closed :7.1%</item>
+        <item>10 Year Closed :7.25%</item>
+        <item>5 Year Closed Variable Rate Mortgage :7.05%</item>
+        <item>5 Year Open Variable Rate Mortgage :8.35%</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

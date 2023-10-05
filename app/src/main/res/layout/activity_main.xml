@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                app:titleTextColor="#F3F2F2"></androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/mortgage"
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:hint="Enter Mortgage Principle Amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/tenure"
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Enter Tenure"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortgage"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <Spinner
+        android:id="@+id/intrestDropdown"
+        android:layout_width="312dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="41dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenure"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <TextView
+        android:id="@+id/monthlyFrequency"
+        android:layout_width="256dp"
+        android:layout_height="76dp"
+        android:text="Payment Frequency: Monthly"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intrestDropdown"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthlyFrequency"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="392dp"
+        android:layout_height="32dp"
+        android:text="Calculate your EMI"
+        android:textAlignment="center"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appbar"
+        app:layout_constraintEnd_toEndOf="@+id/appbar"
+        app:layout_constraintStart_toStartOf="@+id/appbar"
+        app:layout_constraintTop_toTopOf="@+id/appbar" />
+
+    <TextView
+        android:id="@+id/titleMortgage"
+        android:layout_width="317dp"
+        android:layout_height="39dp"
+        android:text="Mortgage Principal Amount"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/mortgage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/titleTenure"
+        android:layout_width="314dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="57dp"
+        android:text="Tenure:"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tenure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortgage" />
+
+    <TextView
+        android:id="@+id/titleInterest"
+        android:layout_width="316dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="9dp"
+        android:text="Choose an Interest Rate"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/intrestDropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenure" />
+
+    <EditText
+        android:id="@+id/hiddenInterest"
+        android:layout_width="291dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Enter Interest"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
